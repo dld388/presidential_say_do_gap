@@ -4,41 +4,65 @@
     <title>Do Presidents Govern As They Speak?</title>
 </head>
 
-<body style="font-family: Arial; max-width: 900px; margin: 40px auto; line-height: 1.6;">
+<body style="font-family: Arial, sans-serif; max-width: 950px; margin: 45px auto; line-height: 1.6; color: #111;">
 
-    <h1>Do Presidents Govern As They Speak?</h1>
+    <h1 style="font-size: 38px;">Do Presidents Govern As They Speak?</h1>
 
     <p><strong>Author:</strong> David Lopez</p>
     <p><strong>Course:</strong> DS-GA 1015 - Text As Data</p>
 
-    <h2>Abstract</h2>
+    <div style="border: 1px solid #ccc; border-radius: 8px; padding: 22px; margin-top: 28px; background-color: #fafafa;">
+        <h2 style="margin-top: 0;">Abstract</h2>
 
-    <p>
-        This project compares what U.S. presidents say publicly with what they do through formal presidential action.
-        The project builds separate Say and Do corpora, maps each president into an ideological space, and measures
-        the distance between rhetoric and action as a presidential say-do gap.
-    </p>
+        <p>
+            This project studies whether U.S. presidents govern consistently with the ideological positions
+            they express in public language. I separate presidential text into two corpora: a <strong>Say corpus</strong>,
+            composed of interviews, speeches, inaugural addresses, farewell addresses, news conferences,
+            and related public-facing texts, and a <strong>Do corpus</strong>, composed of executive orders and written
+            presidential orders. The raw documents were collected from The American Presidency Project.
+        </p>
+
+        <p>
+            The core idea is to place each president twice inside a two-dimensional ideological space: once
+            based on what the president says, and once based on what the president formally does. The
+            first dimension measures left-right economic ideology, while the second measures
+            libertarian-authoritarian ideology.
+        </p>
+
+        <p>
+            I use a theory-driven dictionary-based text-as-data method. Because presidential documents
+            vary substantially in length, words are used as the main measuring device for corpus balance.
+            The final scoring method uses document-level phrase presence, phrase caps, family caps, and
+            evidence filtering to avoid over-weighting repeated legal or administrative language.
+            Presidents with insufficient Say or Do evidence are filtered out before final comparison.
+        </p>
+
+        <p>
+            The <strong>Say-Do Gap</strong> is measured as the Euclidean distance between each president’s Say point
+            and Do point.
+        </p>
+    </div>
 
     <h2>Project Files</h2>
 
     <ul>
-        <li><a href="David Lopez_Do_Presidents_Govern_As_They_Speak_Report.pdf">Final PDF Report</a></li>
+        <li><a href="David_Lopez_Do_Presidents_Govern_As_They_Speak_Report.pdf">Final PDF Report</a></li>
         <li><a href="David_Lopez_Do_Presidents_Govern_As_They_Speak_Notebook.ipynb">Jupyter Notebook</a></li>
-        <li><a href="README_FIRST.pdf">README First</a></li>
+        <li><a href="READMEFIRST.md">README First</a></li>
     </ul>
 
     <h2>Data Files</h2>
 
     <p>
         The repository includes the chunked presidential corpora used for the analysis, including executive orders,
-        interviews, inaugural addresses, and news conferences.
+        interviews, speeches, inaugural addresses, farewell addresses, news conferences, and written presidential orders.
     </p>
 
     <h2>How to Replicate</h2>
 
     <ol>
         <li>Download the repository files.</li>
-        <li>Open the README_FIRST file.</li>
+        <li>Open the READMEFIRST file.</li>
         <li>Open the Jupyter notebook.</li>
         <li>Run the notebook using the included data files.</li>
     </ol>
